@@ -31,17 +31,6 @@ client.developers = [
 
 client.testers = []
 
-# load all the cogs from the assets folder
-for i in os.listdir("./assets"):
-  if i.endswith(".py"):
-    client.load_extension(f"assets.{i[:-3]}")
-
-
-# load all the cogs from the listeners folder
-for i in os.listdir("./listeners"):
-  if i.endswith(".py"):
-    client.load_extension(f"listeners.{i[:-3]}")
-    
 #load the bot token from environment variables
 load_dotenv()
 token = os.getenv("TOKEN")
